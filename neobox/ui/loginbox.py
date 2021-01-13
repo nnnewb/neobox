@@ -1,6 +1,9 @@
+from neobox.ui.sizing import RELATIVE_15, RELATIVE_20
 from nemcore.api import NetEaseApi
 from nemcore.exceptions import NetEaseError
-from urwid import Edit, LineBox, Pile, Button, connect_signal, emit_signal, register_signal
+from nemcore.types.login_resp import LoginResp
+from urwid import Edit, LineBox, Pile, Button, connect_signal, emit_signal, Overlay, MainLoop, Padding, Filler, MIDDLE, CENTER, RELATIVE_100
+from .message_box import MessageBox
 
 
 class LoginBox(LineBox):
@@ -45,3 +48,45 @@ class LoginBox(LineBox):
 
     def on_password_change(self, edit, text):
         self.password = text
+
+
+class LoginOverlay(Overlay):
+    def __init__(self, loop: MainLoop, api: NetEaseApi):
+        self.loop = loop
+        self.login_box = LoginBox(api)
+        self.foreground = Padding(Filler(self.login_box), CENTER)
+        self.background = self.loop.widget
+        super().__init__(self.foreground, self.background, CENTER, RELATIVE_20,
+                         MIDDLE, RELATIVE_15)
+
+        connect_signal(self.login_box, 'login', self.on_login)
+        connect_signal(self.login_box, 'api-error', self.on_error)
+
+    def on_error(self, *args):
+        """
+        on error occurred
+        """
+        error = args[0]
+        MessageBox.open(
+            self.loop,
+            f'=== error occurred ===\ncode {error.code}\nmessage {error.message}'
+        )
+
+    def on_login(self, *args):
+        """
+        on login done
+        """
+        emit_signal(self, 'login', *args)
+        self.close()
+
+    def show(self):
+        """
+        show login overlay
+        """
+        self.loop.widget = self
+
+    def close(self, *args):
+        """
+        close login overlay
+        """
+        self.loop.widget = self.background
