@@ -15,6 +15,7 @@ python = "^3.6"
 nemcore = "^0.1.8"
 click = "^7.1.2"
 rich = "^9.8.2"
+pymad = "^0.10"
 
 [tool.poetry.dev-dependencies]
 wheel="^0.36.2"

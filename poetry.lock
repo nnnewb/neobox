@@ -308,6 +308,19 @@ url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 reference = 'tuna'
 
 [[package]]
+name = "pymad"
+version = "0.10"
+description = "A wrapper for the MAD libraries."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = 'tuna'
+
+[[package]]
 name = "requests"
 version = "2.25.1"
 description = "Python HTTP for Humans."
@@ -469,7 +482,7 @@ reference = 'tuna'
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6"
-content-hash = "4f7e4bdb05acf985967f4fce4d087453af3cb1cf5ce21418b66921bea43b3f53"
+content-hash = "50ba8c2c9d64e33c3809cfdc3f6d08cdd9d3d12e62bddad5db60f569c3951768"
 
 [metadata.files]
 astroid = [
@@ -615,6 +628,9 @@ pygments = [
 pylint = [
     {file = "pylint-2.6.0-py3-none-any.whl", hash = "sha256:bfe68f020f8a0fece830a22dd4d5dddb4ecc6137db04face4c3420a46a52239f"},
     {file = "pylint-2.6.0.tar.gz", hash = "sha256:bb4a908c9dadbc3aac18860550e870f58e1a02c9f2c204fdf5693d73be061210"},
+]
+pymad = [
+    {file = "pymad-0.10.tar.gz", hash = "sha256:4f3cb83614095cf15205d2ebc344148ae11acb22c85741a94748f614d4c4def1"},
 ]
 requests = [
     {file = "requests-2.25.1-py2.py3-none-any.whl", hash = "sha256:c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e"},
