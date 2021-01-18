@@ -7,4 +7,5 @@ dev:
 		pip-sync requirements-dev.txt requirements.txt
 
 start:
+	if [ ! -d venv ]; then $(MAKE) dev; fi
 	source venv/bin/activate && python main.py
