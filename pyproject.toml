@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "neobox"
+version = "0.1.0"
+description = "NetEase Cloud Music Client for command line"
+authors = ["weak_ptr <weak_ptr@outlook.com>"]
+license = "MIT"
+
+[[tool.poetry.source]]
+name = 'tuna'
+url = 'https://pypi.tuna.tsinghua.edu.cn/simple'
+
+
+[tool.poetry.dependencies]
+python = "^3.6"
+nemcore = "^0.1.8"
+click = "^7.1.2"
+rich = "^9.8.2"
+
+[tool.poetry.dev-dependencies]
+wheel="^0.36.2"
+yapf="^0.30.0"
+pylint="^2.6.0"
+isort="^5.7.0"
+mypy="^0.790"
+pdbr = "^0.3.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

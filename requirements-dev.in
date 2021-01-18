@@ -1,5 +1,0 @@
-wheel>=0.36.2
-yapf>=0.30.0
-pylint>=2.6.0
-isort>=5.7.0
-mypy>=0.790
