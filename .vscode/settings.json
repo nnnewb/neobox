@@ -19,4 +19,7 @@
         "**/dist": true,
         "**/venv": true,
     },
+
+    // don't commit lines such as python.pythonPath
+    "python.pythonPath": "/home/weakptr/.cache/pypoetry/virtualenvs/neobox-n-0_4kSt-py3.9/bin/python"
 }

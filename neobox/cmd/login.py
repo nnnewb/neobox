@@ -11,7 +11,7 @@ def login(username, password):
     """登录网易云音乐账号，支持邮箱和手机登录
 
     Args:
-    
+
         username (str): 手机号或邮箱地址
 
         password (str): 密码
