@@ -1,0 +1,9 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.formatting.provider": "yapf",
+    "python.sortImports.args": [
+        "-l",
+        "120"
+    ],
+}
