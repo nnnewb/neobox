@@ -1,7 +1,7 @@
 {
     "python.linting.pylintEnabled": true,
     "python.linting.mypyEnabled": true,
-    "python.formatting.provider": "yapf",
+    "python.formatting.provider": "autopep8",
     "python.sortImports.args": [
         "-l",
         "120"

@@ -21,6 +21,23 @@ reference = 'tuna'
 type = "legacy"
 
 [[package]]
+name = "autopep8"
+version = "1.5.4"
+description = "A tool that automatically formats Python code to conform to the PEP 8 style guide"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+pycodestyle = ">=2.6.0"
+toml = "*"
+
+[package.source]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = 'tuna'
+type = "legacy"
+
+[[package]]
 name = "cachetools"
 version = "4.2.0"
 description = "Extensible memoizing collections and decorators"
@@ -250,18 +267,12 @@ reference = 'tuna'
 type = "legacy"
 
 [[package]]
-name = "pdbr"
-version = "0.3.3"
-description = "Pdb with Rich library."
+name = "pycodestyle"
+version = "2.6.0"
+description = "Python style guide checker"
 category = "dev"
 optional = false
-python-versions = ">=3.6,<4.0"
-
-[package.extras]
-celery = ["celery (>=4.4.7,<5.0.0)"]
-
-[package.dependencies]
-rich = ">=9.0.0,<10.0.0"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [package.source]
 url = "https://pypi.tuna.tsinghua.edu.cn/simple"
@@ -476,19 +487,6 @@ reference = 'tuna'
 type = "legacy"
 
 [[package]]
-name = "yapf"
-version = "0.30.0"
-description = "A formatter for Python code."
-category = "dev"
-optional = false
-python-versions = "*"
-
-[package.source]
-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
-reference = 'tuna'
-type = "legacy"
-
-[[package]]
 name = "zipp"
 version = "3.4.0"
 description = "Backport of pathlib-compatible object wrapper for zip files"
@@ -508,12 +506,15 @@ type = "legacy"
 [metadata]
 lock-version = "1.0"
 python-versions = "^3.6"
-content-hash = "d6fd2fc91bef3c5de8ca31ecf865f23e431324e92370c96bfbfd037b3c762d9f"
+content-hash = "9df1f38f0e103a214daf75b4266786ff15d29e954920f8d2baeaecf23e1df6ed"
 
 [metadata.files]
 astroid = [
     {file = "astroid-2.4.2-py3-none-any.whl", hash = "sha256:bc58d83eb610252fd8de6363e39d4f1d0619c894b0ed24603b881c02e64c7386"},
     {file = "astroid-2.4.2.tar.gz", hash = "sha256:2f4078c2a41bf377eea06d71c9d2ba4eb8f6b1af2135bec27bbbb7d8f12bb703"},
+]
+autopep8 = [
+    {file = "autopep8-1.5.4.tar.gz", hash = "sha256:d21d3901cb0da6ebd1e83fc9b0dfbde8b46afc2ede4fe32fbda0c7c6118ca094"},
 ]
 cachetools = [
     {file = "cachetools-4.2.0-py3-none-any.whl", hash = "sha256:c6b07a6ded8c78bf36730b3dc452dfff7d95f2a12a2fed856b1a0cb13ca78c61"},
@@ -606,9 +607,9 @@ nemcore = [
     {file = "NEMCore-0.1.8-py3-none-any.whl", hash = "sha256:430478451077ea59af500d61b96f39297b397974fd0c3b2fa0b0198005556407"},
     {file = "NEMCore-0.1.8.tar.gz", hash = "sha256:8689bb9929600731fa05f278660d6d5933d6685fee41fe2638e90bdc72e0670b"},
 ]
-pdbr = [
-    {file = "pdbr-0.3.3-py3-none-any.whl", hash = "sha256:f033412e9c8ffef80f22494051ed670c86c3fb92ea4c069007725721c23297b7"},
-    {file = "pdbr-0.3.3.tar.gz", hash = "sha256:8240f272c675cb2614769086b858fea48a982b2e925bdcba1f3c26b30088fe38"},
+pycodestyle = [
+    {file = "pycodestyle-2.6.0-py2.py3-none-any.whl", hash = "sha256:2295e7b2f6b5bd100585ebcb1f616591b652db8a741695b3d8f5d28bdc934367"},
+    {file = "pycodestyle-2.6.0.tar.gz", hash = "sha256:c58a7d2815e0e8d7972bf1803331fb0152f867bd89adf8a01dfd55085434192e"},
 ]
 pycryptodomex = [
     {file = "pycryptodomex-3.9.9-cp27-cp27m-macosx_10_6_intel.whl", hash = "sha256:5e486cab2dfcfaec934dd4f5d5837f4a9428b690f4d92a3b020fd31d1497ca64"},
@@ -721,10 +722,6 @@ wheel = [
 ]
 wrapt = [
     {file = "wrapt-1.12.1.tar.gz", hash = "sha256:b62ffa81fb85f4332a4f609cab4ac40709470da05643a082ec1eb88e6d9b97d7"},
-]
-yapf = [
-    {file = "yapf-0.30.0-py2.py3-none-any.whl", hash = "sha256:3abf61ba67cf603069710d30acbc88cfe565d907e16ad81429ae90ce9651e0c9"},
-    {file = "yapf-0.30.0.tar.gz", hash = "sha256:3000abee4c28daebad55da6c85f3cd07b8062ce48e2e9943c8da1b9667d48427"},
 ]
 zipp = [
     {file = "zipp-3.4.0-py3-none-any.whl", hash = "sha256:102c24ef8f171fd729d46599845e95c7ab894a4cf45f5de11a44cc7444fb1108"},

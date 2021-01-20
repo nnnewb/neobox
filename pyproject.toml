@@ -10,6 +10,9 @@ name = 'tuna'
 url = 'https://pypi.tuna.tsinghua.edu.cn/simple'
 default = true
 
+[tool.autopep8]
+max_line_length = 120
+
 [tool.poetry.dependencies]
 python = "^3.6"
 nemcore = "^0.1.8"
@@ -19,11 +22,10 @@ pymad = "^0.10"
 
 [tool.poetry.dev-dependencies]
 wheel="^0.36.2"
-yapf="^0.30.0"
 pylint="^2.6.0"
 isort="^5.7.0"
 mypy="^0.790"
-pdbr = "^0.3.3"
+autopep8 = "^1.5.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
